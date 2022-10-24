@@ -30,7 +30,7 @@ function NotFoundPage(): JSX.Element {
         </div>
       </header>
 
-      <main className="page__main page__main--notfound">
+      <main className="page__main page__main--not-found">
         <div className="container">
           <h1>404. Page not found</h1>
           <a href="/">Вернуться на главную</a>
