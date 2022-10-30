@@ -1,15 +1,9 @@
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AppRoute } from '../../const';
-import LoginPage from '../../pages/login-page/login-page';
-import MainPage from '../../pages/main-page/main-page';
-import NotFoundPage from '../../pages/not-found-page/not-found-page';
-import RoomPage from '../../pages/room-page/room-page';
-
-type AppProps = {
-  offersCount: number;
-}
+import { MainPage, LoginPage, RoomPage, NotFoundPage } from '../../pages';
+import { AppRoute } from '../../router';
+import { AppProps } from './types';
 
 function App(props: AppProps): JSX.Element {
   const { offersCount } = props;
