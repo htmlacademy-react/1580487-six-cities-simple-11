@@ -1,27 +1,27 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import PlaceCard from '../../components/place-card/place-card';
+import { AppLogo, PlacesList } from '../../components';
+import { Offer } from '../../types/offer';
 
 type MainPageProps = {
   offersCount: number;
+  offersData: Offer[];
 }
 
 function MainPage(props: MainPageProps): JSX.Element {
-  const { offersCount } = props;
+  const { offersCount, offersData } = props;
 
   return (
     <div className="page page--gray page--main">
       <Helmet>
-        <title>Mainpage 6 Cities</title>
+        <title>6 Cities — Mainpage</title>
       </Helmet>
 
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <a className="header__logo-link header__logo-link--active" href="#todo">
-                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
-              </a>
+              <AppLogo />
             </div>
             <nav className="header__nav">
               <ul className="header__nav-list">
@@ -100,13 +100,8 @@ function MainPage(props: MainPageProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                <PlaceCard />
-                <PlaceCard />
-                <PlaceCard />
-                <PlaceCard />
-                <PlaceCard />
-              </div>
+
+              <PlacesList offers={offersData} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
