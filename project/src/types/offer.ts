@@ -1,4 +1,5 @@
 import { OfferTypeData } from '../const';
+import { User } from './user';
 
 export type Location = {
   latitude: number;
@@ -8,13 +9,6 @@ export type Location = {
 
 export type City = {
   location: Location;
-  name: string;
-}
-
-export type User = {
-  avatarUrl: string;
-  id: number;
-  isPro: boolean;
   name: string;
 }
 
@@ -37,5 +31,3 @@ export type Offer = {
   title: string;
   type: OfferType;
 }
-
-export type Offers = Offer[];

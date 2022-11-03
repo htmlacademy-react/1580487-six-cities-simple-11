@@ -1,5 +1,5 @@
 import { OfferTypeData } from '../const';
-import { OfferType } from '../types/offers';
+import { OfferType } from '../types/offer';
 
 export const getOfferTypeView = (data: OfferType): string => {
   switch (data) {
